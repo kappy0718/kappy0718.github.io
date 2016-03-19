@@ -8,11 +8,11 @@ window.onload = function(){
 }
 // for jQuery
 $(document).ready(function(){
-    console.log("jQuery start");
+    console.log("start jQuery");
 
-    //load startup
-    kappy.startup = (function(){
-        var loadScript = function(src) {
+    //make startup
+    kappy.startup = new (function(){
+        this.loadScript = function(src) {
             var script = document.createElement( "script" );
             var d = new $.Deferred;
 
@@ -28,14 +28,13 @@ $(document).ready(function(){
             document.body.appendChild( script );
             return d.promise();
         }
-        return {loadScript: loadScript}
-    })();
+    });
 
-    // load src
+    // load diaryMaker
     var src = "js/topJs/diaryMaker.js";
     kappy.startup.loadScript(src)
         .then(function(){
-            console.log("loaded deferred : " + src);
+            kappy.diaryMaker.importDiary();
     });;
 });
 
