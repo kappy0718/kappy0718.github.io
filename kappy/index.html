@@ -5,13 +5,16 @@
     <title>Kayyps's Page</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet/less" type="text/css" href="css/topStyle.less">
-    <script type="text/javascript" src="js/less/less.js" ></script>
+    <script type="text/javascript" src="js/lib/less.js" ></script>
     <!--
     to work less.js chrome need  --allow-file-access-from-files
     it also use cdn like following
     <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
     -->
-    <script type="text/javascript" src="js/jquery/jquery-2.2.2.min.js"></script>
+    <script type="text/javascript" src="js/lib/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/lib/jquery-2.2.2.min.js"></script>
+
+    <script type="text/javascript" src="js/topJs/startup.js"></script>
 </head>
 <body>
     <header class="header item">
@@ -152,23 +155,10 @@
         <a href="#">
             <div class="image">
                 <img src="images/my_cage.jpg" alt="カビーちゃん">
-            </div>s
+            </div>
             <div class="category">My Cage</div>
             <p class="description">カピーが暮らしているお家です。居心地は良くないですがカピーは犬畜生なので仕方ないです。</p>
         </a>
     </section>
-
-
-    <script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.js"></script>
-    <script>
-        window.onload = function(){
-            new Masonry("body",{
-                itemSelector: " .item",
-                columnWidth: 180,
-                gutter: 4
-            });
-        }
-    </script>
-
 </body>
 </html>
