@@ -1,11 +1,3 @@
-//for Masonry
-window.onload = function(){
-    new Masonry("body",{
-        itemSelector: " .item",
-        columnWidth: 180,
-        gutter: 4
-    });
-}
 // for jQuery
 $(document).ready(function(){
     console.log("start jQuery");
@@ -20,7 +12,7 @@ $(document).ready(function(){
             script.src = src;
             script.onload = function( e )
             {
-                console.log("loaded event : " + src);
+                console.log("loaded script : " + src);
                 d.resolve();
             }
             var firstScript = document.getElementsByTagName( "script" )[0];
@@ -31,11 +23,19 @@ $(document).ready(function(){
     });
 
     // load diaryMaker
-    var src = "js/topJs/diaryMaker.js";
-    kappy.startup.loadScript(src)
+    kappy.startup.loadScript("js/topJs/diaryMaker.js")
         .then(function(){
-            kappy.diaryMaker.importDiary();
-    });;
+            return kappy.diaryMaker.importDiary();
+        }).then(function(){
+            console.log("imported diary");
+
+            // star Masonry
+            new Masonry("body",{
+                itemSelector: " .item",
+                columnWidth: 180,
+                gutter: 4
+            });
+    });
 });
 
 

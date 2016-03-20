@@ -1,0 +1,20 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160320",
+    "imagePath": "diary/201603/img/",
+    "headline": {
+      "iconImage": "kappy.jpg",
+      "alt": "カピーちゃん",
+      "title": "Kappy's page",
+      "description": "カピーのほうむぺいじへようこそ！カピーはバカなのでパパに作ってもらいました。",
+      "category":"test",
+      "size":"large",
+      "href":"#"
+
+    },
+    "body": {
+
+    }
+  }
+}

@@ -3,6 +3,7 @@
 @ITEM_COLOR_TYPE_02 : #76c047;
 @ITEM_COLOR_TYPE_03 : #fff100;
 @ITEM_COLOR_TYPE_04 : #c1efff;
+@ITEM_COLOR_TYPE_TEST : #ffc0cb;
 
 
 html {
@@ -83,6 +84,10 @@ a:link, a:visited, a:hover, a:active{
   &.item-breaktime,
   &.item-breaktime .category::before {
     border-color : @ITEM_COLOR_TYPE_04;
+  }
+  &.item-test,
+  &.item-test .category::before {
+    border-color : @ITEM_COLOR_TYPE_TEST;
   }
 
   .image {
