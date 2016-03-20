@@ -1,14 +1,14 @@
 {
   "diary": {
     "name": "kappy",
-    "date": "20160320",
+    "date": "20160319",
     "imagePath": "diary/201603/img/",
     "headline": {
       "iconImage": "i_am_kappy.jpg",
       "alt": "カピーちゃん",
       "title": "I am Kappy",
       "description": "カピーは１歳です。まだおしっこを失敗するのでママとパパと寝るときはオムツをしています。",
-      "category":"test",
+      "category":"type02",
       "size":"small",
       "href":"#"
     },

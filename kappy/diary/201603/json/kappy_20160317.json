@@ -1,14 +1,14 @@
 {
   "diary": {
     "name": "kappy",
-    "date": "20160320",
+    "date": "20160317",
     "imagePath": "diary/201603/img/",
     "headline": {
       "iconImage": "kappy_birthday.jpg",
       "alt": "カピーちゃん",
       "title": "Happy Birthday",
       "description": "１歳の誕生日にケーキというものを食べました。来年もケーキが食べたいです。あとシーザーも食べたい。",
-      "category":"test",
+      "category":"type04",
       "size":"small",
       "href":"#"
 

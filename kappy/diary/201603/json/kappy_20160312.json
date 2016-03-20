@@ -1,0 +1,20 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160312",
+    "imagePath": "diary/201603/img/",
+    "headline": {
+      "iconImage": "kappy_with_mama.jpg",
+      "alt": "カピーちゃん",
+      "title": "Sleeping on Mama",
+      "description": "大好きなママの上で寝ます。アイツはカッパ臭いので絶対にこうはなりたくない。",
+      "category":"type01",
+      "size":"small",
+      "href":"#"
+
+    },
+    "body": {
+
+    }
+  }
+}

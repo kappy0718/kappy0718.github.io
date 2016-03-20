@@ -3,7 +3,12 @@ kappy.diaryMaker = new (function(){
         "diary/201603/json/kappy_20160320.json",
         "diary/201603/json/kappy_20160319.json",
         "diary/201603/json/kappy_20160318.json",
-        "diary/201603/json/kappy_20160317.json"
+        "diary/201603/json/kappy_20160317.json",
+        "diary/201603/json/kappy_20160316.json",
+        "diary/201603/json/kappy_20160315.json",
+        "diary/201603/json/kappy_20160314.json",
+        "diary/201603/json/kappy_20160313.json",
+        "diary/201603/json/kappy_20160312.json"
     ]
     this.importDiary = function(){
         console.log("start diary maker");
@@ -121,8 +126,17 @@ kappy.diaryMaker = new (function(){
     }
     this.getSectionCategory = function(headline){
         switch (headline.category){
-            case "test" :
-                return "item-test";
+            case "type01" :
+                return "item-type01";
+                break;
+            case "type02" :
+                return "item-type02";
+                break;
+            case "type03" :
+                return "item-type03";
+                break;
+            case "type04" :
+                return "item-type04";
                 break;
         }
     }

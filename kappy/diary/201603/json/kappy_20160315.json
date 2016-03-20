@@ -1,0 +1,20 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160315",
+    "imagePath": "diary/201603/img/",
+    "headline": {
+      "iconImage": "kappy_sleep.jpg",
+      "alt": "カピーちゃん",
+      "title": "Sleeping Kappy",
+      "description": "カピーはバカなのでパパとママ以外の人でも平気で寝ます。",
+      "category":"type02",
+      "size":"small",
+      "href":"#"
+
+    },
+    "body": {
+
+    }
+  }
+}

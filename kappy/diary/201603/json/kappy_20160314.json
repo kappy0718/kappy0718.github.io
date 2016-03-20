@@ -1,0 +1,20 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160314",
+    "imagePath": "diary/201603/img/",
+    "headline": {
+      "iconImage": "kappy_xmas.jpg",
+      "alt": "カピーちゃん",
+      "title": "Merry Xmas",
+      "description": "くりすますに、トナカイになりました。畜生同士、変わりがないのになぜ変装させられたのでしょう。。。",
+      "category":"type03",
+      "size":"small",
+      "href":"#"
+
+    },
+    "body": {
+
+    }
+  }
+}

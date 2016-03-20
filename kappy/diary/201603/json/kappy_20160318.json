@@ -1,14 +1,14 @@
 {
   "diary": {
     "name": "kappy",
-    "date": "20160320",
+    "date": "20160318",
     "imagePath": "diary/201603/img/",
     "headline": {
       "iconImage": "my_cage.jpg",
       "alt": "カピーちゃん",
       "title": "My Cage",
       "description": "カピーが暮らしているお家です。居心地は良くないですがカピーは犬畜生なので仕方ないです。",
-      "category":"test",
+      "category":"type03",
       "size":"small",
       "href":"#"
 
