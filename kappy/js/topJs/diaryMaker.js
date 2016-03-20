@@ -76,6 +76,8 @@ kappy.diaryMaker = new (function(){
         // description
         a.append(this.makeDescription(data));
 
+        a.append(this.makeDate(data));
+
         return a;
     }
     this.makeImage = function(data){
@@ -93,6 +95,20 @@ kappy.diaryMaker = new (function(){
         div.append(img);
 
         return div;
+    }
+    this.makeDate = function(data){
+        var p = $("<p></p>");
+
+        // class date
+        p.addClass("date");
+        var date = data.diary.date,
+            year = date.substr(0,4),
+            month = date.substr(4,2),
+            day = date.substr(6,2);
+        date = year + "/" + month + "/" + day;
+        p.html(date);
+
+        return p;
     }
     this.makeDescription = function(data){
         var headline = data.diary.headline;
@@ -118,6 +134,8 @@ kappy.diaryMaker = new (function(){
         switch (headline.size){
             case "large" :
                 return "item-l";
+            case "medium" :
+                return "item-m";
             case "small" :
                 return "";
             default :
