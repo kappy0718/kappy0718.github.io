@@ -19,6 +19,7 @@
       "title": "this is title",
       "content":[
         {
+          "type": "image",
           "image": "kappy.jpg",
           "alt": "カピーちゃん",
           "title": "Kappy's Page",
@@ -26,12 +27,21 @@
           "description": "カピーのほうむぺいじへようこそ！カピーはバカなのでパパに作ってもらいました。"
         },
         {
+          "type": "video",
+          "videoPath" : "https://www.youtube.com/embed/rCbwcjf5z3E?rel=0",
+          "title": "Kappy is small",
+          "category": "type03",
+          "description": "カピーが小さい時です。ままのひざに乗れるほど小さいです。"
+        },
+        {
+          "type": "image",
           "image": "kappy_birthday.jpg",
           "alt": "カピーちゃん",
           "title": "Happy Birthday",
           "category": "type04",
           "description": "１歳の誕生日にケーキというものを食べました。来年もケーキが食べたいです。あとシーザーも食べたい。"
         }
+
       ]
     }
   }

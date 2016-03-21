@@ -78,14 +78,34 @@ kappy.diaryMaker = new (function(){
     }
     this.makeSingleSectionByBody = function(data, content, s){
         var body = data.diary.body,
-            noBody = false;
+            noBody = false,
+            type = content.type;
+
+        switch (type){
+            case "image" :
+                this.makeSingleImageSectionByBody(data, noBody, content, s);
+                break;
+            case "video" :
+                this.makeSingleVideoSectionByBody(data, noBody, content, s);
+                break;
+        }
+    }
+    this.makeSingleVideoSectionByBody = function(data, noBody, content, s){
+
+        s.append(this.makeVideoBody(data, noBody, content));
+
+        s.append(this.makeCategoryBody(data, noBody, content));
+
+        s.append(this.makeDescriptionBody(data, noBody, content));
+
+    }
+    this.makeSingleImageSectionByBody = function(data, noBody, content, s){
 
         s.append(this.makeImageBody(data, noBody, content));
 
         s.append(this.makeCategoryBody(data, noBody, content));
 
         s.append(this.makeDescriptionBody(data, noBody, content));
-
     }
     this.makeSectionByHeadline = function (data, noBody) {
         var headline = data.diary.headline;
@@ -183,6 +203,23 @@ kappy.diaryMaker = new (function(){
 
         return a;
     }
+    this.makeVideoBody = function (data, noBody, content) {
+        var div = $("<div></div>");
+        
+        // class video-container
+        div.addClass("video-container");
+        
+        var iFrame = $("<iframe></iframe>");
+        var src = content.videoPath;
+        iFrame.attr("src",src);
+        iFrame.attr("frameborder","0");
+        iFrame.attr("allowfullscreen","");
+
+        div.append(iFrame);
+
+        return div;
+        
+    }
     this.makeImageBody = function(data, noBody, content){
         var headline = data.diary.headline;
         var img = $("<img>");
@@ -190,7 +227,6 @@ kappy.diaryMaker = new (function(){
         // class image
         var diaryPath = data.diary.diaryPath;
         img.addClass("image");
-
 
         if(noBody){
             // get src from headline
