@@ -1,0 +1,117 @@
+@charaset "UTF-8";
+@ITEM_COLOR_TYPE_01 : #ffc0cb;
+@ITEM_COLOR_TYPE_02 : #76c047;
+@ITEM_COLOR_TYPE_03 : #fff100;
+@ITEM_COLOR_TYPE_04 : #c1efff;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 30px;
+  background-color: #f6f7fb;
+  color : #333;
+  font-size: 1.2rem;
+  font-family: "Hiragino Maru Gothic ProN", Meiryo, sans-serif;
+}
+
+a:link, a:visited, a:hover, a:active{
+  color: #7c5119;
+  text-decoration: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 136px;
+  height: 136px;
+  transition: transform 0.3s;
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
+.nav {
+  margin: 35px auto 10px;
+}
+.nav-item {
+  margin-top: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+#diary {
+  display: inline-block;
+}
+
+.item {
+  width: 180px;
+  margin-bottom: 4px;
+  padding: 8px;
+  border-bottom: 3px solid;
+  border-radius: 5px;
+  background-color: #fff;
+  display: inline-block;
+
+  // item size type
+  &.header {
+    padding: 25px 0;
+    border-bottom: none;
+    text-align: center;
+    vertical-align: top;
+  }
+  &.item-l {
+    width: 732px;
+  }
+
+  // item color type
+  &.item-type01,
+  .item-type01.category::before {
+    border-color : @ITEM_COLOR_TYPE_01;
+  }
+  &.item-type02,
+  .item-type02.category::before {
+    border-color : @ITEM_COLOR_TYPE_02;
+  }
+  &.item-type03,
+  .item-type03.category::before {
+    border-color : @ITEM_COLOR_TYPE_03;
+  }
+  &.item-type04,
+  .item-type04.category::before {
+    border-color : @ITEM_COLOR_TYPE_04;
+  }
+  .image {
+    display: block;
+    width: 100%;
+  }
+  .category {
+    margin: 15px 9px 10px;
+    color: #aaa;
+    letter-spacing: 1px;
+    font-family: "Trebuchet MS", "Hiragino Maru Gothic ProN", Meiryo, sans-serif;
+    &::before {
+      content: "";
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      margin-right: 5px;
+      border: 3px solid;
+      border-radius: 50%;
+      vertical-align: -5px;
+    }
+  }
+  .description {
+    margin: 10px;
+    line-height: 1.5;
+  }
+  .date {
+    margin: 10px 10px 0px;
+    line-height: 1.5;
+    text-align: right;
+  }
+}
+

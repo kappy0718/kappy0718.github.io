@@ -3,6 +3,7 @@
     "name": "kappy",
     "date": "20160318",
     "imagePath": "diary/201603/img/",
+    "diaryPath": "diary",
     "headline": {
       "iconImage": "my_cage.jpg",
       "alt": "カピーちゃん",
@@ -10,7 +11,7 @@
       "description": "カピーが暮らしているお家です。居心地は良くないですがカピーは犬畜生なので仕方ないです。",
       "category":"type03",
       "size":"small",
-      "href":"#"
+      "href":"diary.html"
 
     },
     "body": {

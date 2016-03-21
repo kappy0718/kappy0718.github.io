@@ -3,6 +3,7 @@
     "name": "kappy",
     "date": "20160316",
     "imagePath": "diary/201603/img/",
+    "diaryPath": "diary",
     "headline": {
       "iconImage": "kappy_in_car.jpg",
       "alt": "カピーちゃん",
@@ -10,7 +11,7 @@
       "description": "初めて車というものに乗りました。あいつの運転がへたくそなので揺れて気持ち悪くなり、吐いてしまいました。ままごめんね。",
       "category":"type01",
       "size":"medium",
-      "href":"#"
+      "href":"diary.html"
 
     },
     "body": {

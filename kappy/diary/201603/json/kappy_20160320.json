@@ -2,19 +2,37 @@
   "diary": {
     "name": "kappy",
     "date": "20160320",
+    "id": "",
+    "diaryPath": "diary",
     "imagePath": "diary/201603/img/",
     "headline": {
       "iconImage": "kappy.jpg",
       "alt": "カピーちゃん",
-      "title": "Kappy's page",
+      "title": "Kappy's Page",
       "description": "カピーのほうむぺいじへようこそ！カピーはバカなのでパパに作ってもらいました。",
       "category":"type01",
       "size":"large",
-      "href":"#"
+      "href":"diary.html"
 
     },
     "body": {
-
+      "title": "this is title",
+      "content":[
+        {
+          "image": "kappy.jpg",
+          "alt": "カピーちゃん",
+          "title": "Kappy's Page",
+          "category": "type01",
+          "description": "カピーのほうむぺいじへようこそ！カピーはバカなのでパパに作ってもらいました。"
+        },
+        {
+          "image": "kappy_birthday.jpg",
+          "alt": "カピーちゃん",
+          "title": "Happy Birthday",
+          "category": "type04",
+          "description": "１歳の誕生日にケーキというものを食べました。来年もケーキが食べたいです。あとシーザーも食べたい。"
+        }
+      ]
     }
   }
 }

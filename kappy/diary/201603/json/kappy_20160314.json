@@ -3,6 +3,7 @@
     "name": "kappy",
     "date": "20160314",
     "imagePath": "diary/201603/img/",
+    "diaryPath": "diary",
     "headline": {
       "iconImage": "kappy_xmas.jpg",
       "alt": "カピーちゃん",
@@ -10,7 +11,7 @@
       "description": "くりすますに、トナカイになりました。畜生同士、変わりがないのになぜ変装させられたのでしょう。。。",
       "category":"type03",
       "size":"small",
-      "href":"#"
+      "href":"diary.html"
 
     },
     "body": {

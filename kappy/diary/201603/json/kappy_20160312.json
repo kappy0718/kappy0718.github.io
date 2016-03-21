@@ -3,6 +3,7 @@
     "name": "kappy",
     "date": "20160312",
     "imagePath": "diary/201603/img/",
+    "diaryPath": "diary",
     "headline": {
       "iconImage": "kappy_with_mama.jpg",
       "alt": "カピーちゃん",
@@ -10,7 +11,7 @@
       "description": "大好きなママの上で寝ます。アイツはカッパ臭いので絶対にこうはなりたくない。",
       "category":"type01",
       "size":"small",
-      "href":"#"
+      "href":"diary.html"
 
     },
     "body": {

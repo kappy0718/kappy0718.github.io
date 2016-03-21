@@ -10,6 +10,109 @@ kappy.diaryMaker = new (function(){
         "diary/201603/json/kappy_20160313.json",
         "diary/201603/json/kappy_20160312.json"
     ]
+    // for body --
+    this.importDiaryBody = function(){
+        console.log("start diary maker for body");
+        var self = this;
+        var d = new $.Deferred;
+        // get json name from hash
+        var name = location.hash.substr(1);
+        // make json path
+        var s = name.split("_");
+        // 20160320 -> 201603
+        var src = s[1].substr(0,6);
+        src =  src + "/json/" + name + ".json";
+
+        // get json file
+        $.getJSON(src, function(data){
+            console.log("loaded : " + src);
+
+            var diary = self.makeDiaryBody(data);
+            
+            self.addDiary(diary);
+
+            d.resolve();
+        })
+
+        return d.promise();
+    }
+    this.makeDiaryBody = function(data){
+        var isBody = data.diary.body && data.diary.body.content,
+            noBody = !isBody;
+
+        // force noBody
+        //noBody = true;
+        if(noBody){
+            return this.makeSectionByHeadline(data, noBody);
+        }else{
+            return this.makeSectionByBody(data);
+        }
+        
+    }
+    this.makeSectionByBody = function(data){
+        var headline = data.diary.headline,
+            body = data.diary.body,
+            content = body.content;
+
+        var s = $('<section></section>');
+        // class item
+        s.addClass("item");
+
+        // section size, class item-l
+        s.addClass("item-l");
+
+        // section category
+        s.addClass(this.getSectionCategory(headline))
+
+        for(var i = 0; i < content.length; i++){
+            this.makeSingleSectionByBody(data, content[i], s);
+            if(i < content.length - 1 ){
+                var br = $("<br><br>");
+                s.append(br);
+            }
+        }
+
+        s.append(this.makeDate(data));
+
+        return s;
+    }
+    this.makeSingleSectionByBody = function(data, content, s){
+        var body = data.diary.body,
+            noBody = false;
+
+        s.append(this.makeImageBody(data, noBody, content));
+
+        s.append(this.makeCategoryBody(data, noBody, content));
+
+        s.append(this.makeDescriptionBody(data, noBody, content));
+
+    }
+    this.makeSectionByHeadline = function (data, noBody) {
+        var headline = data.diary.headline;
+
+        var s = $("<section></section>");
+        // class item
+        s.addClass("item");
+
+        // section size, class item-l
+        s.addClass("item-l");
+
+        // section category
+        s.addClass(this.getSectionCategory(headline));
+
+        s.append(this.makeImageBody(data, noBody));
+
+        s.append(this.makeCategoryBody(data, noBody));
+
+        s.append(this.makeDescriptionBody(data, noBody));
+
+        s.append(this.makeDate(data));
+
+        return s;
+    }
+    // --
+
+    // for headlines
     this.importDiary = function(){
         console.log("start diary maker");
         var d = new $.Deferred;
@@ -65,7 +168,7 @@ kappy.diaryMaker = new (function(){
         var a = $("<a></a>");
 
         // href
-        a.attr("href", this.getHref(headline));
+        a.attr("href", this.getHref(data));
 
         // image
         a.append(this.makeImage(data));
@@ -79,6 +182,38 @@ kappy.diaryMaker = new (function(){
         a.append(this.makeDate(data));
 
         return a;
+    }
+    this.makeImageBody = function(data, noBody, content){
+        var headline = data.diary.headline;
+        var img = $("<img>");
+        
+        // class image
+        var diaryPath = data.diary.diaryPath;
+        img.addClass("image");
+
+
+        if(noBody){
+            // get src from headline
+            var src = this.getIconPath(data);
+            src = src.replace(diaryPath + "/","");
+            img.attr("src",src);
+            img.attr("alt",this.getIconAlt(headline));
+
+            return img;
+        }else{
+            var src = this.getBodyImagePath(data, content);
+            src = src.replace(diaryPath + "/","");
+            img.attr("src",src);
+            img.attr("alt",this.getBodyImageAlt(content));
+
+            return img;
+        }
+    }
+    this.getBodyImagePath = function(data, content){
+        return data.diary.imagePath + content.image;
+    }
+    this.getBodyImageAlt = function(content){
+        return content.alt || "";
     }
     this.makeImage = function(data){
         var headline = data.diary.headline;
@@ -110,6 +245,23 @@ kappy.diaryMaker = new (function(){
 
         return p;
     }
+    this.makeDescriptionBody = function(data, noBody, content){
+        if(noBody){
+            // make from headline
+            return this.makeDescription(data);
+        }else{
+            var p = $("<p></p>");
+
+            // class description
+            p.addClass("description");
+            p.html(this.getContentDescription(content));
+
+            return p;
+        }
+    }
+    this.getContentDescription = function(content){
+        return content.description || "no description";
+    }
     this.makeDescription = function(data){
         var headline = data.diary.headline;
         var p = $("<p></p>");
@@ -120,12 +272,32 @@ kappy.diaryMaker = new (function(){
 
         return p;
     }
+    this.makeCategoryBody = function(data, noBody, content){
+        if(noBody){
+            // make from headline
+            return this.makeCategory(data);
+        }else{
+            var div = $("<div></div>");
+
+            // class category
+            div.addClass("category");
+            div.addClass(this.getSectionCategory(content));
+            div.html(this.getContentTitle(content));
+
+            return div;
+        }
+    }
+    this.getContentTitle = function(content){
+        return content.title || "no title";
+    }
     this.makeCategory = function(data){
         var headline = data.diary.headline;
         var div = $("<div></div>");
 
         // class category
         div.addClass("category");
+        // class item color, it is only for diary body
+        div.addClass(this.getSectionCategory(headline));
         div.html(this.getHeadlineTitle(headline));
 
         return div;
@@ -158,8 +330,16 @@ kappy.diaryMaker = new (function(){
                 break;
         }
     }
-    this.getHref = function(headline){
-        return headline.href || "#";
+    this.getHref = function(data){
+        var headline = data.diary.headline;
+        var path = data.diary.diaryPath;
+        var href = path + "/" + headline.href,
+            name = data.diary.name || "",
+            date = data.diary.date || "",
+            id = data.diary.id || "";
+
+        href += "#" + name + "_" + date + (id ? ("_" + id) : "");
+        return href || "#";
     }
     this.getIconPath = function(data){
         return data.diary.imagePath + data.diary.headline.iconImage; 

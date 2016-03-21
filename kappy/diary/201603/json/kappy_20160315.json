@@ -3,6 +3,7 @@
     "name": "kappy",
     "date": "20160315",
     "imagePath": "diary/201603/img/",
+    "diaryPath": "diary",
     "headline": {
       "iconImage": "kappy_sleep.jpg",
       "alt": "カピーちゃん",
@@ -10,7 +11,7 @@
       "description": "カピーはバカなのでパパとママ以外の人でも平気で寝ます。",
       "category":"type02",
       "size":"small",
-      "href":"#"
+      "href":"diary.html"
 
     },
     "body": {
