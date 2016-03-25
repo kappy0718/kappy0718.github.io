@@ -22,8 +22,15 @@ $(document).ready(function(){
         }
     });
 
-    // load diaryMaker
-    kappy.startup.loadScript("../js/topJs/diaryMaker.js")
+    // load headerMaker
+    kappy.startup.loadScript("js/topJs/headerMaker.js")
+        .then(function(){
+            // load diaryMaker
+            return kappy.startup.loadScript("js/topJs/diaryMaker.js");
+        })
+        .then(function(){
+            return kappy.headerMaker.makeHeader();
+        })
         .then(function(){
             return kappy.diaryMaker.importDiaryBody();
         }).then(function(){

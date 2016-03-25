@@ -44,6 +44,21 @@ a:link, a:visited, a:hover, a:active{
   letter-spacing: 1px;
   font-weight: bold;
   font-size: 1.3rem;
+
+  a {
+    display: inline-block;
+  }
+  a::after {
+    content: '';
+    display: block;
+    width: 0;
+    margin: 6px auto 0;
+    border-bottom:  2px solid #7c5119;
+    transition: width 0.3s ease-in-out;
+  }
+  a:hover::after {
+    width: 100%;
+  }
 }
 
 .item {

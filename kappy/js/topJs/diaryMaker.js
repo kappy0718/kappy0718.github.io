@@ -21,7 +21,7 @@ kappy.diaryMaker = new (function(){
         var s = name.split("_");
         // 20160320 -> 201603
         var src = s[1].substr(0,6);
-        src =  src + "/json/" + name + ".json";
+        src =  "diary/" + src + "/json/" + name + ".json";
 
         // get json file
         $.getJSON(src, function(data){
@@ -231,14 +231,16 @@ kappy.diaryMaker = new (function(){
         if(noBody){
             // get src from headline
             var src = this.getIconPath(data);
-            src = src.replace(diaryPath + "/","");
+            // not replace because html is located under kappy directory
+            //src = src.replace(diaryPath + "/","");
             img.attr("src",src);
             img.attr("alt",this.getIconAlt(headline));
 
             return img;
         }else{
             var src = this.getBodyImagePath(data, content);
-            src = src.replace(diaryPath + "/","");
+            // not replace because html is located under kappy directory
+            //src = src.replace(diaryPath + "/","");
             img.attr("src",src);
             img.attr("alt",this.getBodyImageAlt(content));
 
@@ -369,7 +371,8 @@ kappy.diaryMaker = new (function(){
     this.getHref = function(data){
         var headline = data.diary.headline;
         var path = data.diary.diaryPath;
-        var href = path + "/" + headline.href,
+        //var href = path + "/" + headline.href,
+        var href = headline.href,
             name = data.diary.name || "",
             date = data.diary.date || "",
             id = data.diary.id || "";
