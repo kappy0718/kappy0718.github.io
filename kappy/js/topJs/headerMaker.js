@@ -14,7 +14,7 @@ kappy.headerMaker= new (function() {
         { name: "ままの絵",
             href: "index.html"},
         { name: "ままの小説",
-            href: "index.html"}
+            href: "novel.html" + "#" + "novel1"}
     ]
 
     this.makeHeader = function(){

@@ -1,4 +1,7 @@
 kappy.diaryMaker = new (function(){
+
+    this.MODE = "";
+
     this.DIARY_SOURCE = [
         "diary/201603/json/kappy_20160320.json",
         "diary/201603/json/kappy_20160319.json",
@@ -17,11 +20,16 @@ kappy.diaryMaker = new (function(){
         var d = new $.Deferred;
         // get json name from hash
         var name = location.hash.substr(1);
-        // make json path
-        var s = name.split("_");
-        // 20160320 -> 201603
-        var src = s[1].substr(0,6);
-        src =  "diary/" + src + "/json/" + name + ".json";
+        var src;
+        if(this.MODE == "NOVEL"){
+            src = "novel/json/novel1.json";
+        } else {
+            // make json path
+            var s = name.split("_");
+            // 20160320 -> 201603
+            src = s[1].substr(0,6);
+            src =  "diary/" + src + "/json/" + name + ".json";
+        }
 
         // get json file
         $.getJSON(src, function(data){
@@ -82,6 +90,9 @@ kappy.diaryMaker = new (function(){
             type = content.type;
 
         switch (type){
+            case "text" :
+                this.makeSingleTextSectionByBody(data, noBody, content, s);
+                break;
             case "image" :
                 this.makeSingleImageSectionByBody(data, noBody, content, s);
                 break;
@@ -89,6 +100,13 @@ kappy.diaryMaker = new (function(){
                 this.makeSingleVideoSectionByBody(data, noBody, content, s);
                 break;
         }
+    }
+    this.makeSingleTextSectionByBody = function(data, noBody, content, s){
+
+        s.append(this.makeCategoryBody(data, noBody, content));
+
+        s.append(this.makeDescriptionBody(data, noBody, content));
+
     }
     this.makeSingleVideoSectionByBody = function(data, noBody, content, s){
 
