@@ -1,0 +1,18 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160330",
+    "id": "",
+    "diaryPath": "diary",
+    "imagePath": "diary/201603/img/",
+    "headline": {
+      "iconImage": "like_a_kappa.jpg",
+      "alt": "カピーちゃん",
+      "title": "Like a Kappa",
+      "description": "ママはカピーの毛を切るのがへたくそなのでカッパみたいになってしまいました。ママはカビ―の事を落武者と言います",
+      "category":"type04",
+      "size":"medium",
+      "href":"diary.html"
+    }
+  }
+}

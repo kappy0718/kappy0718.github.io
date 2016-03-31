@@ -1,0 +1,49 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160331",
+    "id": "",
+    "diaryPath": "diary",
+    "imagePath": "diary/201603/img/",
+    "headline": {
+      "iconImage": "sleepy_kappy.jpg",
+      "alt": "カピーちゃん",
+      "title": "Sleepy Page",
+      "description": "カピーです。今日から日記をつけたいと思います。",
+      "category":"type02",
+      "size":"",
+      "href":"diary.html"
+
+    },
+    "body": {
+      "title": "this is title",
+      "content":[
+        {
+          "type": "image",
+          "image": "sleepy_kappy.jpg",
+          "alt": "カピーちゃん",
+          "title": "Sleepy Kapy",
+          "category": "type01",
+          "description": "今日はちょっと眠いです。"
+        },
+        {
+          "type": "video",
+          "videoPath" : "https://www.youtube.com/embed/gtSY8QIcM7Y?rel=0",
+          "title": "Today's Kappy",
+          "category": "type03",
+          "description": "今日のカピーの動画。"
+        },
+        {
+          "type": "image",
+          "image": "long_kappy.jpg",
+          "alt": "カピーちゃん",
+          "title": "Long Kappy",
+          "category": "type04",
+          "description": "カピーは意外と胴が長いようです。"
+        }
+
+      ]
+    }
+  }
+}
+
