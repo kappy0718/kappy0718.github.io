@@ -27,6 +27,30 @@ a:link, a:visited, a:hover, a:active{
   text-decoration: none;
 }
 
+#loader {
+  width: 120px;
+  height: 120px;
+  display: none;
+  position: fixed;
+  _position: absolute; /* IE6対策 */
+  top: 50%;
+  left: 50%;
+  margin-top: -60px; /* heightの半分のマイナス値 */
+  margin-left: -60px; /* widthの半分のマイナス値 */
+  z-index: 100;
+}
+
+#fade {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 50;
+}
+
 .logo {
   width: 136px;
   height: 136px;
