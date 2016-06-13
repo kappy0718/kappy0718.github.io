@@ -1,0 +1,21 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160613",
+    "imagePath": "diary/201606/img/",
+    "diaryPath": "diary",
+    "headline": {
+      "iconImage": "old_kappy.jpg",
+      "alt": "カピーちゃん",
+      "title": "An elderly dog",
+      "description": "カピーは毛を切ってもらえなかったのでおじいさんみたいでした。あと、昨日は妹ができました。",
+      "category":"type01",
+      "size":"small",
+      "href":"diary.html"
+
+    },
+    "body": {
+
+    }
+  }
+}
