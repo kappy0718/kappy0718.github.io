@@ -1,0 +1,21 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160614",
+    "imagePath": "diary/201606/img/",
+    "diaryPath": "diary",
+    "headline": {
+      "iconImage": "kappy_and_shiro.jpg",
+      "alt": "カピーちゃん",
+      "title": "Shiro and Kappy",
+      "description": "しろとカピーです。右がカピーで左がしろです。まだちょっとばかし距離があるように思います。だんだん仲良くなれるといいな。",
+      "category":"type03",
+      "size":"medium",
+      "href":"diary.html"
+
+    },
+    "body": {
+
+    }
+  }
+}
