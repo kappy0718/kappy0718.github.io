@@ -15,6 +15,24 @@
 
     },
     "body": {
+      "title": "this is title",
+      "content":[
+        {
+          "type": "image",
+          "image": "kappy_and_shiro.jpg",
+          "alt": "カピーちゃん",
+          "title": "Shiro and Kappy",
+          "category": "type03",
+          "description": "カピーは妹ができてうれしいです。でもちょっと恥ずかしいです。"
+        },
+        {
+          "type": "video",
+          "videoPath" : "https://www.youtube.com/embed/Q2SaWhTuec0",
+          "title": "Kappy is very concerned about Shiro",
+          "category": "type04",
+          "description": "今日のカピーの動画。しろが気になります。でも恥ずかしいです。"
+        }
+      ]
 
     }
   }
