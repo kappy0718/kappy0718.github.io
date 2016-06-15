@@ -1,0 +1,21 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160612",
+    "imagePath": "diary/201606/img/",
+    "diaryPath": "diary",
+    "headline": {
+      "iconImage": "shiro.jpg",
+      "alt": "カピーちゃん",
+      "title": "Shiro in box",
+      "description": "しろです。この箱で運ばれてきました。ちょっとばかし怖かったです。今日からはカピーお兄ちゃんと暮らします。",
+      "category":"type04",
+      "size":"medium",
+      "href":"diary.html"
+
+    },
+    "body": {
+
+    }
+  }
+}

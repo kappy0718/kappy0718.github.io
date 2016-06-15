@@ -1,0 +1,21 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160603",
+    "imagePath": "diary/201606/img/",
+    "diaryPath": "diary",
+    "headline": {
+      "iconImage": "wearing_clothes.jpg",
+      "alt": "カピーちゃん",
+      "title": "Wearing clohtes",
+      "description": "洋服をきました。ママのお気に入りです。カピーは犬畜生ですが洋服など着て喜んでもらえれば幸せです。",
+      "category":"type02",
+      "size":"small",
+      "href":"diary.html"
+
+    },
+    "body": {
+
+    }
+  }
+}

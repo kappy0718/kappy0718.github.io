@@ -1,0 +1,21 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160602",
+    "imagePath": "diary/201606/img/",
+    "diaryPath": "diary",
+    "headline": {
+      "iconImage": "sleeping_flat_on.jpg",
+      "alt": "カピーちゃん",
+      "title": "Deep Sleep",
+      "description": "仰向けで熟睡です。さすがに疲れました。犬畜生なのにまるで人間みたいです。パパとおなじで白目で寝ます。パパが好きです。",
+      "category":"type03",
+      "size":"small",
+      "href":"diary.html"
+
+    },
+    "body": {
+
+    }
+  }
+}
