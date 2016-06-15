@@ -1,0 +1,46 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160615",
+    "imagePath": "diary/201606/img/",
+    "diaryPath": "diary",
+    "headline": {
+      "iconImage": "eating_food.jpg",
+      "alt": "カピーちゃん",
+      "title": "Kappy eats Food",
+      "description": "今日はパパが新しいごはんを買って来てくくれました。いつもよりおいしいです。でも'しいざあ'のほうがいい。",
+      "category":"type04",
+      "size":"medium",
+      "href":"diary.html"
+
+    },
+    "body": {
+      "title": "this is title",
+      "content":[
+        {
+          "type": "image",
+          "image": "eating_food.jpg",
+          "alt": "カピーちゃん",
+          "title": "Kappy eats Food",
+          "category": "type01",
+          "description": "'しいざあ'には劣りますがこのご飯もなかなかおいしいです。妹にはあげない。"
+        },
+        {
+          "type": "video",
+          "videoPath" : "https://www.youtube.com/embed/3D6Yt5Dm0fA",
+          "title": "Kappy is eating new food",
+          "category": "type02",
+          "description": "このご飯は時々とても柔らかくておいしいやつがあります。そればかり探して食べます。"
+        },
+        {
+          "type": "video",
+          "videoPath" : "https://www.youtube.com/embed/E4r84sTQv6M",
+          "title": "Shiro is eating food",
+          "category": "type03",
+          "description": "しろはいつもと同じご飯だけど食べ盛りです。勢いが止まりません。"
+        }
+      ]
+
+    }
+  }
+}
