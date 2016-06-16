@@ -1,0 +1,46 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160616",
+    "imagePath": "diary/201606/img/",
+    "diaryPath": "diary",
+    "headline": {
+      "iconImage": "sister_eating_food.jpg",
+      "alt": "カピーちゃん",
+      "title": "Sister is eating",
+      "description": "妹のしろがご飯を食べています。カピーと違ってよく食べます。カピーは'しいざあ'しか食べたくない。",
+      "category":"type03",
+      "size":"medium",
+      "href":"diary.html"
+
+    },
+    "body": {
+      "title": "this is title",
+      "content":[
+        {
+          "type": "image",
+          "image": "sister_eating_food.jpg",
+          "alt": "カピーちゃん",
+          "title": "Sister is eating",
+          "category": "type03",
+          "description": "妹のしろの食欲には関心です。カピーは大人だからあんなものは食べない。"
+        },
+        {
+          "type": "video",
+          "videoPath" : "https://www.youtube.com/embed/kZt_EQFUs4U",
+          "title": "Shiro is eating food",
+          "category": "type01",
+          "description": "今日のカピーの動画。しろがご飯を食べているのを見ています。どうも気になる。"
+        },
+        {
+          "type": "video",
+          "videoPath" : "https://www.youtube.com/embed/bli30F3Yes8",
+          "title": "Kappy plays with shiro",
+          "category": "type02",
+          "description": "しろと遊びたいけどやっぱり怖い。この四速歩行の動物はやたら元気がありカピーはちょっと怖いです。"
+        }
+      ]
+
+    }
+  }
+}

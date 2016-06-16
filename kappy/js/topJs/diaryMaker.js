@@ -4,7 +4,8 @@ kappy.diaryMaker = new (function(){
 
     this.DIARY_SOURCE = [
         "diary/201603/json/kappy_20160320.json",
-        "diary/201606/json/kappy_20160612a.json",
+        "diary/201606/json/kappy_20160611.json",
+        "diary/201606/json/kappy_20160616.json",
         "diary/201606/json/kappy_20160615.json",
         "diary/201606/json/kappy_20160614.json",
         "diary/201606/json/kappy_20160612.json",
