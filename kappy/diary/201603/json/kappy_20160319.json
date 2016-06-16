@@ -17,6 +17,7 @@
       "title": "this is title",
       "content":[
         {
+          "type": "image",
           "image": "i_am_kappy.jpg",
           "alt": "カピーちゃん",
           "title": "I am Kappy",
