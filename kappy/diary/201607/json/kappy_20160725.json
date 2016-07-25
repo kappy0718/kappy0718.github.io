@@ -1,0 +1,49 @@
+{
+  "diary": {
+    "name": "kappy",
+    "date": "20160725",
+    "id": "",
+    "diaryPath": "diary",
+    "imagePath": "diary/201607/img/",
+    "headline": {
+      "iconImage": "eating_kappy.jpg",
+      "alt": "カピーちゃん",
+      "title": "Happy Birthday Kappy",
+      "description": "２歳の誕生日にケーキを食べました。本当は７月１８日が誕生日なのに忘れられていました。カピーも忘れていました。実はカピーは犬畜生だから誕生日がよくわかりません。",
+      "category":"type01",
+      "size":"large",
+      "href":"diary.html"
+
+    },
+    "body": {
+      "title": "this is title",
+      "content":[
+        {
+          "type": "image",
+          "image": "eating_kappy.jpg",
+          "alt": "カピーちゃん",
+          "title": "Kappy eats Cake",
+          "category": "type01",
+          "description": "ケーキを２個も食べたました。おいしくてすぐに食べ終わりました。"
+        },
+        {
+          "type": "image",
+          "image": "eating_shiro.jpg",
+          "alt": "カピーちゃん",
+          "title": "Shiro eats Cake",
+          "category": "type02",
+          "description": "お兄ちゃんが誕生日なのでしろもケーキを１個食べました。しろは食べ盛りです。"
+        },
+        {
+          "type": "image",
+          "image": "cake.jpg",
+          "alt": "カピーちゃん",
+          "title": "Cake",
+          "category": "type03",
+          "description": "人も食べられるケーキ。意外とおいしかった。"
+        }
+
+      ]
+    }
+  }
+}

@@ -3,6 +3,7 @@ kappy.diaryMaker = new (function(){
     this.MODE = "";
 
     this.DIARY_SOURCE = [
+        "diary/201607/json/kappy_20160725.json",
         "diary/201603/json/kappy_20160320.json",
         "diary/201606/json/kappy_20160611.json",
         "diary/201606/json/kappy_20160616.json",
@@ -22,7 +23,7 @@ kappy.diaryMaker = new (function(){
         "diary/201603/json/kappy_20160314.json",
         "diary/201603/json/kappy_20160313.json",
         "diary/201603/json/kappy_20160312.json"
-    ]
+    ];
     // for body --
     this.importDiaryBody = function(){
         console.log("start diary maker for body");
